@@ -1,0 +1,100 @@
+@import url('common.css');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+
+header{
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+    padding:60px;
+    margin:0 auto;
+}
+header h1{}
+header h1 img{ 
+    width:100%;max-width:40px;
+}
+header nav{}
+header nav a{margin:0 20px;position:relative;}
+header nav a:after{
+    content:'';
+    position:absolute;
+    bottom:0;left:50%;
+    height:2px;width:0%;
+    background:#000;
+    transition:width .5s ease-in, left .5s;
+    
+    /*
+    transition-property: width;
+    transition-duration: .5s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in;
+    */
+    /* 속성  변형시간  딜레이  움직임 */
+    
+}
+header nav a:hover:after{
+    width:100%; left:0;
+}
+section{}
+section div{ /*비주얼*/
+    background:#f3f3f3;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    white-space:pre-line;
+    text-align:center;   
+}
+section div strong{
+    font-size:3em;
+    transition:.5s;
+    font-family: 'Nanum Myeongjo', serif;
+}
+section div:hover strong{
+    font-size:2.5em;
+}
+section div p{
+    transition:.5s;
+}
+
+section ul{ /*썸네일*/
+    overflow:hidden;
+}
+section ul li{
+   float:left;
+   width:25%;         
+   height:500px;background:#eee;
+   position:relative;
+}
+section ul li:after{
+    content:'';
+    position:absolute;
+    width:100%; height:100%; 
+    background:#21bfb9 url('../img/ic_view.png') center no-repeat;
+    opacity:0;    
+    transition:.5s;
+}
+section ul li:hover:after{
+    opacity:1;
+    
+}
+section ul li:nth-of-type(2n+1):nth-of-type(-n+4){
+    background:#ddd;
+}
+section ul li:nth-of-type(2n+6):nth-of-type(-n+8){
+    background:#ddd;
+}
+section ul li:nth-of-type(2n+9):nth-of-type(-n+12){
+    background:#ddd;
+}
+footer{
+    display:flex;
+    justify-content: space-between;
+    background:#333; padding:100px 0;
+}
+footer div{
+    white-space: pre-line;
+}
+
+
+
