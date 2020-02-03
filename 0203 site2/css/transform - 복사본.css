@@ -1,0 +1,29 @@
+@import url('common.css');
+html,body{height: 100%;}
+article{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{font-size: 2em; color: #333; padding-bottom: 50px;}
+
+.scale figure{
+}
+
+.scale figure img{transition: 1s;
+width:50%;
+}
+
+.scale figure:hover img{
+    transform: 
+        rotate(100deg)
+        translateX(50%)
+        scale(2) ;
+    
+}
+
+
+/*--------------------------------*/
