@@ -1,0 +1,85 @@
+@import url('common.css');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+.total{ width:1920px; height:1200px;
+border:1px solid black;
+padding:0 67px 0 33px;
+margin: 0 auto;}
+
+
+/* header */
+.header{
+    width:1820px; height: 72px;
+margin-bottom: 28px;
+padding-right:75px;
+}
+
+.header h1 img{
+position: absolute;
+}
+
+
+.header ul{
+    display: flex;
+    justify-content: flex-end;
+    height:72px;
+    font-family: 'Nanum Gothic', sans-serif;
+    
+}
+
+.header ul li:nth-of-type(6):after{
+    content: "";
+    color: black;
+    height: 80px;
+    border-right: 1px solid black;
+    margin-left:30px;
+}
+
+.header ul li a{font-size:17px;
+padding:10px 0 0 30px;
+color:black;}
+
+
+
+/* content */
+.content{width:1820; height: 840px;
+    background: url(../img/201911292132080_main_01.jpg) no-repeat
+    50% 50%;
+}
+.content h2{font-size: 116px;
+    color: white;
+    text-align: center;
+    padding-top: 300px;
+    padding-left: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.content p{font-size: 22px;
+    color: white;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* menu */
+.header ul{position: relative}
+.header ul .menu{
+    position: absolute;
+    right:30px; top:20px;
+    width:30px; 
+}
+
+.header ul .menu span{
+width:100%;height:2px;
+background: black;
+position: absolute;
+left: 100px; top:0px;
+}
+
+.header ul .menu span:nth-of-type(1){top:0;
+width:100%;}
+
+.header ul .menu span:nth-of-type(2){top:6px;
+    width:70%;
+}
+.header ul .menu span:nth-of-type(3){top:12px;
+width:80%;}
