@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--    style_basic-->
+
+<style>
+    .basic{
+        /*font*/
+        font-size:16px;
+        line-height: 2;
+        color: #f00;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: -1px;
+/*        자간 기본0*/
+        word-break: break-all;
+/*      break-all
+        단어가 잘려서 다음 줄로 표현
+        
+        kepp-all
+        공간이 부족하다면 다음줄로 표현
+        */
+        word-wrap: break-word;
+/*        지정된 영역밖으로 텍스트가 넘어갈때 사용*/
+        font-family: "Lato","Nanum gothic", sans-serif;
+/*          영문,중문,일문,국문*/
+        
+/*        엘리먼트 크기*/
+        width:500px; height:2000px;
+        
+/*        외곽라인*/
+        border: 1px solid black;
+        border-left: 30px solid black;
+        border-width:1px 0 1px 0;
+        border-style: dashed;
+        
+/*        정렬*/
+        text-align: center;
+/*        가로여백이 있을 경우!! left, centrer, right
+        인라인요소경우 여백을 확보해야 사용가능하다 */
+        
+        margin:0 auto; 
+/*        block요소만 해당 
+        inline-block XXXX 적용되지않는다*/
+        
+        
+/*        백그라운드*/
+/*        background: color url position repeat fixed size*/
+        
+        background: url('img/Untitled-3.jpg') left top,
+            url('img/Untitled-3.jpg') right bottom ;
+            
+        background-color:#f00;
+        background-repeat:no-repeat; 
+/*        background-position: left bottom;*/
+/*        left right top bottom 숫자값 이용 가능*/
+/*        background-attachment: fixed;*/
+        background-size: 50%;
+        
+/*        background: #0ff url('img/wallhaven-4xlz1z.jpg') 0 0 no-repeat;*/
+        
+    }    
+
+</style>
+
+</head>
+<body>
+<div class="basic">
+콘텐츠 enging<br>
+콘텐츠 enging<br>
+콘텐츠 enging<br>
+콘텐츠 enging<br>
+콘텐츠 enging<br>
+
+</div>
+</body>
+</html>
