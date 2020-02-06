@@ -18,11 +18,17 @@ width:50%;
 }
 
 .scale figure:hover img{
+    animation:txt .7s .5s forwards;
     transform: 
         rotate(100deg)
         translateX(50%)
         scale(2) ;
     
+}
+
+@keyframes txt{
+    0%{top:0;}
+    100%{top:20}
 }
 
 
