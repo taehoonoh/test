@@ -1,22 +1,43 @@
 @import url('common.css');
 
-body{background: #ede0df;
+body{background: #ede0df
 }
 
-    
-.header{width:100%;
-text-align: center;
-margin-top:80px;
-position: absolute;
-bottom: 0; left:0;}
+section{width:1000px;
+margin: 0 auto;
+position: relative;}
 
-.header div img{
+
+section div img{}
+
+section .text{position: absolute;
+    top:700px; left:-50px}
+
+
+section .text strong{color: black;
+font-size: 50px;}
+
+section .text p{color: black;
+font-size: 30px;}
+
+section nav{position: absolute;
+bottom:300px; right:100px;}
+
+section nav ul{color: black;
 }
-.header h1{font-size: 83px;
-    margin-bottom: 81px;
 
+section nav ul li{font-size:30px;
+position: relative;}
+
+section nav ul li::after{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    opacity: 0;
 }
-
-content{}
-
-.nav ul li{font-size: 13px;}
+section nav ul li:after:hover a{
+    opacity: 1;
+}
