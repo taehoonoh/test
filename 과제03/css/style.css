@@ -1,0 +1,43 @@
+@import url('common.css');
+
+body{background: #ede0df
+}
+
+section{width:1000px;
+margin: 0 auto;
+position: relative;}
+
+
+section div img{}
+
+section .text{position: absolute;
+    top:700px; left:-50px}
+
+
+section .text strong{color: black;
+font-size: 50px;}
+
+section .text p{color: black;
+font-size: 30px;}
+
+section nav{position: absolute;
+bottom:300px; right:100px;}
+
+section nav ul{color: black;
+}
+
+section nav ul li{font-size:30px;
+position: relative;}
+
+section nav ul li::after{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    opacity: 0;
+}
+section nav ul li:after:hover a{
+    opacity: 1;
+}
