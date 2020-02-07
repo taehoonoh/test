@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/*        overflow hidden 마스크효과!!!!!!!!!!!
+        오버플로우 히든 밖에 있는 컨텐츠는
+        모두 가려진다*/
+        .lay_01{
+
+            border: 5px solid #000;
+        }
+        .lay_01:after{
+            content: "";
+            display: block;
+            clear: both;
+/*            after를 이렇게 주로 사용
+            */
+        }
+        .lay_01 div{
+            width: 40%; height: 500px;
+            
+        }
+        .lay_01 div:nth-of-type(1){
+            background: #f00;
+            float: left;
+        }
+        .lay_01 div:nth-of-type(2){
+            background: #00f;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+<!--콘텐츠 레이아웃 block요소 선택    -->
+<!--block, inline-block, inline -->
+<div class="lay_01">
+    <div>좌측 콘텐츠</div>
+    <div>우측 콘텐츠</div>
+<!--    ::after(clearfix)-->
+<!--    inline-block으로 하면 내부에 블럭요소X
+블럭요소를 inline-block으로 X 혼동 컨텐츠가 적을때는
+괜찮아 inline요소를 inline-block을 써라!!!-->
+</div>
+</body>
+</html>

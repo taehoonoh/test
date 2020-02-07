@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body,html{margin: 0;}
+        .section_1, .section_2, .section_3{background:url(img/wall.jpg) no-repeat fixed;
+        background-size: cover;
+        width: 100%; height: 100vh;
+/*       vh = viewport height*/
+/*            fixed로 고정이된다.*/
+        }
+        
+        .section_2{
+            background-image: url(img/Untitled-3.jpg);
+        }
+        
+        .section_3{
+            background-image: url(img/Untitled-1.jpg);
+        }
+        header{
+            position: fixed;
+            left;0; top:0;
+            width: 100%; padding: 30px;
+            background: rgba(255,131,48,0.6); color: white;
+/*            0.6 알파값은 투명도*/
+            text-align: center;
+        }
+/*        fixed 부모가 따로 생기지않고 부모건 부모기준이다*/
+/*        absolute, fixed는 height를 퍼센트 가능
+        fixed는 부모와 상관없음
+        absolute는 부모가 없을때(body)
+        */
+        aside{position: fixed;
+        right: 0%; top:30%;
+        width: 100px; height: 50%;
+        background: #000;
+        color: white;}
+    </style>
+</head>
+<body>
+  
+  
+   <header>header</header>
+    
+    <div class="section_1"></div>
+    <div class="section_2"></div>
+    <div class="section_3"></div>
+
+    <aside>Quick menu</aside>
+</body>
+</html>
