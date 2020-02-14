@@ -1,0 +1,437 @@
+@import url('common.css');
+
+/*header*/
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #121212;
+    padding: 36px 0;
+    position: fixed;
+    z-index: 30;
+    }
+
+header .allheader {
+    display: flex;
+    background: #121212;
+    justify-content: space-between;
+   
+    width: 100%;
+    padding: 0 235px;
+    
+    
+}
+
+header .leftmenu {
+    display: flex;
+    justify-content: center;
+     align-items: center;
+
+}
+
+header .leftmenu h1 {
+    font-size: 30px;
+    color: white;
+    margin-right: 70px;
+
+}
+
+
+header .leftmenu h1 p{text-align: center;
+color: white;
+font-size: 12px}
+header .leftmenu nav {}
+
+header .leftmenu nav ul {
+    display: flex;
+}
+
+header .leftmenu nav ul li {}
+header .leftmenu nav ul li a{}
+header .leftmenu nav ul li div{position: relative;
+}
+header .leftmenu nav ul li div a{display: none;}
+header .leftmenu nav ul li div a{
+    display: none;
+    top:0; left:0;
+    width:100%;
+    margin-top: 15px;
+}
+header .leftmenu nav ul li a:hover{
+    text-decoration: underline;
+}
+header .leftmenu nav ul li:hover div a{
+   display: block;
+    margin-bottom: 10px;
+    
+}
+
+header .leftmenu nav ul li a {
+    margin-right: 50px;
+    color: white;
+}
+
+header .submenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .submenu .search {}
+
+header .submenu .search input {
+    outline: inherit;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+    background: none;
+    color: white;
+    text-align: left;
+    
+}
+header .submenu .search button{
+    background: none;
+    border: none;
+}
+header .submenu .search button img{
+    margin-top: 5px;
+        width:20px;
+    height: 20px;
+}
+
+header .submenu .member {}
+
+header .submenu .member a {}
+
+header .submenu .member a img {
+    width: 20px;
+    height: 20px;
+    margin-left: 40px;
+}
+/*비쥬얼 디졸브-----------------------*/
+.dissolve{position: relative;
+    transition: 5s;
+}
+
+.dissolve img{
+    position: absolute;
+    top:0%;left:0;
+    animation: hoon 10s  infinite;
+}
+.dissolve img:nth-of-type(2){
+    position: absolute;
+    top:0; left:0;
+    animation: hoon2 10s infinite;
+    width:1923px;
+    height: 681px;
+}
+@keyframes hoon {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes hoon2{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*----------section----------------*/
+
+section{padding-top: 700px;
+margin-bottom: 70px;}
+
+section > figure {
+    margin-bottom: 70px;
+    position: absolute;
+    text-align: center;
+    top:25%; left:5%;
+}
+/*section figure video{width:1200px;}*/
+
+/*
+section figure ddddd{
+    position: relative;
+    top: 0;left:0;
+}
+section figure > img:nth-of-type(1){
+    margin-bottom: 70px;
+    position: absolute;
+    animation: hoon 10s;
+}
+section figure > img:nth-of-type(2){
+    margin-bottom: 70px;
+    position: absolute;
+    animation: hoon2 10s;
+    opacity: 0;
+}
+*/
+
+section figure > figcaption {}
+
+section figure > figcaption > p {
+    font-size: 50px;
+    color: white;
+}
+
+section figure figcaption > strong {
+    font-size: 70px;
+    color: white;
+}
+
+section figure figcaption > p:last-child {
+    font-size: 15px;
+}
+
+section figure img {}
+
+
+
+
+
+
+
+/*베스트---------------------*/
+section .best {
+    padding: 0 235px;
+    margin-top: 50px;
+/*    background: #f9f9f9;*/
+    
+}
+
+section .best > p {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    
+}
+
+section .best > p span {
+    background: #fff;
+    padding: 0 20px;
+    color: black;
+    
+    
+}
+
+section .best>p::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: -1;
+    
+}
+
+section .best figure {}
+
+section .best figure ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section .best figure ul li {
+    position: relative;
+}
+
+section .best figure ul li:hover:after {
+    background: #2b2c2e;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    
+}
+
+section .best figure ul li a:nth-of-type(2) img {
+    width: 10%ㄴ;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    border: none;
+    opacity: 0;
+    z-index: 10;
+}
+
+section .best figure ul li:hover a:nth-of-type(2) img {
+    opacity: .8;
+}
+
+section .best figure ul li a {
+   
+}
+
+section .best figure ul li a img {
+    width:330px;
+}
+
+section .best figure ul li figcaption {
+    text-align: center;
+    background: #414141;
+    padding-bottom: 10px;
+}
+
+section .best figure ul li figcaption  p{
+    color: white;
+    font-size: 12px;
+    
+}
+
+section .best figure ul li figcaption p:nth-of-type(2){
+        font-size: 12px;
+    color: white;
+}
+
+section .best figure ul li figcaption strong{
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    
+}
+
+/*추천상품-------------------------*/
+section .choice {
+    padding: 0 235px;
+    margin-top: 50px;
+}
+
+section .choice > p {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+section .choice > p span {
+    background: white;
+    padding: 0 30px;
+    color: black;
+}
+
+section .choice > p::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: -1;
+}
+
+section .choice figure {}
+
+section .choice figure ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section .choice figure ul li {
+}
+
+section .choice figure ul li a span{
+    position: absolute;
+    display: block;
+    top:40%; left: 40%;
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+}
+section .choice figure ul li:hover a span{
+    font-size: 20px;
+    z-index: 10;
+    opacity: 1;
+}
+
+
+
+section .choice figure ul li a img {
+    width:300px;
+}
+section .choice figure ul li{
+    position: relative;
+}
+section .choice figure ul li:hover:after{
+    position: absolute;
+    top:0; left: 0;
+    display: block;
+    content: "";
+    color: white;
+    font-size: 30px;
+    background: black;
+    width:300px;
+    height: 300px;
+    opacity: .8;
+}
+
+
+section .choice figure{position: relative;}
+
+section .choice figure p {
+    position: absolute;
+    top: 40%;
+    right: 101%;
+}
+
+section .choice figure p:last-child {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+}
+
+section .choice figure p img {
+    width: 3vw;
+}
+
+
+
+map{text-align: center;}
+/*---------------footer*/
+
+
+
+footer {
+    width: 100%;
+    background: #414141;
+}
+
+footer > p {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+footer p a {
+    font-size: 12px;
+    color: white;
+    position: relative;
+}
+
+footer p a::after {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: white;
+    display: block;
+    top: 6px;
+    right: -3px;
+    position: absolute;
+}
+
+footer p a:last-child::after {
+    background: none;
+}
+
+footer p:nth-child(2) {
+    white-space: pre-line;
+    padding-bottom: 50px;
+    font-size: 12px;
+    color: white;
+}
