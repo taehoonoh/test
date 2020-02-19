@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1>산술연산자</h1>");
+        var x = 10;
+        var y = 30;
+
+
+        document.write("x+y="+(x+y));
+        document.write("<br>(x+y)/2="+(x+y)/2);
+        document.write("<br>(x+y)*2="+(x+y)*2);
+        document.write("<br>(x+y)%2="+(x+y)%2);
+
+        document.write("<h1>증감연산자</h1>");
+        // x=10, y=30
+
+        document.write("<br>x++ =>"+(x++)); 
+        document.write("<br>x++ =>"+(x++));
+        document.write("<br>x =>"+(x));
+
+
+        document.write("<br>x++ =>"+(x--)); 
+        document.write("<br>x++ =>"+(x--));
+        document.write("<br>x =>"+(x));
+        
+
+        var a = 50, b = 3, c= 6, d= 10;
+
+                                //50 + 3 + 6 + 11=70
+                                //50 + 4 + 7 + 11=72
+                                //b++ c++ 다음계산시 1을 더한다 
+        document.write("<br>" + (a + b++ + c++ + ++d));
+        document.write("<br>" + (a + b + c + d));
+
+
+        document.write("<h1>비교연산자</h1>");
+        var a = 10; 
+        var b = 20;
+        var c = a < b;
+
+        document.write("<br>" + (a < b));
+
+        document.write("<br>" + (a > b));
+
+        document.write("<br>" + (a != b));
+
+        document.write("<br>" + (a == b));
+
+        // typeof ===데이터타입검사
+        
+        var a = 120, b = '120'
+
+        document.write("<br>" + (a !== b));
+
+        document.write("<h1>논리연산자</h1>");
+
+        // &&(AND) 둘 조건 모두 true 일때 true이다  
+        //||(OR) 둘중 하나라도 true 면 true
+
+        document.write("<br>" + (10 == 10 && 10 < 20)); //true
+
+        document.write("<br>" + (10 == 11 && 10 < 20)); //false
+
+        document.write("<br>" + (10 == 11 || 10 < 20)); //true
+
+        document.write("<br>" + (10 == 10 || 10 < 20)); //true 
+        
+        document.write("<h1>연 습 문 제 </h1>");
+
+
+        var kor = 80, eng = 70; 
+                                        // 괄호를 사용하여 구분 
+        document.write('홍길동님의 총점:'+ (kor + eng )+ " / "+"평균 :" + (eng+kor)/2+"점")
+
+        var hong = [80,70] 
+
+                                        // 괄호를 사용하여 구분 
+        document.write("<br>"+'홍길동님의 총점:'+ (hong[0]+hong[1])+ " / "+"평균 :" + (hong[0]+hong[1])/2+"점")
+
+
+
+        // um........
+        var hong = {kor:80,eng:70}; 
+
+        var sum = (hong.kor)+(hong.eng), avg = sum/2;
+        
+    
+          // 괄호를 사용하여 구분 
+        document.write("홍길동님의 총점:"+ hong.kor);
+    </script>
+</body>
+</html>

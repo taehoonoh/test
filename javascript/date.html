@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // //var 변수선언 
+    var x = 3;
+   
+
+    // // 문자와 숫자가 결합 = 문자(string)
+    // document.write("<br>"+(x+3));
+    // document.write(x+3+"<br>");
+    // // '<div>'+01+'</div>'
+   
+    // alert(x);
+    // var y = "3";
+    // // typeof를 이용하여 타입을 찾는다.
+    // // alert(typeof x == y); //number 
+    // // alert(typeof y); //string 
+
+    // var x = 3;
+    // var x;
+
+
+
+    // 널 값이 할당되지않음(빈값)
+    // 연산을할때는 빈값을 넣어준다
+    var x = null;
+    
+    console.log(x+'3');
+    //언디파인드 확인되지않음
+    var z;
+    console.log(z+3);
+
+
+    // bleen
+    document.write("<h1>Bollean</h1>");
+    // 값을 다시 대입(재할당) 한다.
+    var x = 50;
+    var y = 30;
+    var bln = x >= y; //false
+    document.write("<br>x =>"+x);
+    document.write("<br>y =>"+y);
+    document.write("<br>(x >= y) =>"+bln);
+
+    // Array(배열)
+    // 변수 x 여러 값을넣겠다.
+    // index,
+    document.write("<h1>Array(배열)</h1>");
+    var x = [];
+    x[0] = 3;
+    x[1] = 6;
+    x[2] = 9;
+    x[10] = 10;
+    x.push(11)
+
+    //키를 더한다.
+    // 변수 x 안에 있는 배열 1번째 값만 출력
+    console.log(x[8])
+
+
+
+    //Object(객체)
+    // key : value ( 제목 : 값)
+    // 키를 기반으로 자료 저장
+    // 여러 자료형을 한번에 저장하는 자료형
+    document.write("<h1>Object(객체)</h1>");
+    var x = {};
+    x["kor"] = 90;
+    x["eng"] = 100;
+    x["mth"] = 60;
+    // 객체 추가
+    x.sgn = 80;
+    x["m     01"] = 80;
+    // 객체확인
+    console.log(x["kor"])
+
+    
+  document.write(
+                    "<br>var x = {};" +
+                    "<br>x[kor] = 90;" +
+                    "<br>x[eng] = 100;" +
+                    "<br>x[mth] = 60;" +
+                    "<br>배열 추가" +
+                    "<br>x.sgn = 80;" +
+                    "<br><br>x[m     01] = 80;" +
+                    "x => {"+
+
+                        "kor:90,"+
+                        "eng:100,"+
+                        "mth:60,"+
+                        "sgn:80,"+
+                        "m   01:80"+
+                    "}"
+
+                    );
+
+    /*
+        X = {
+                name : "홍길동"
+                kor : 90,
+                eng : 100,
+                mth : 60
+                total : function(){
+                    return this.kor + this.eng + 
+                    this.mth
+                }
+        };
+    */
+
+    // {
+    //     color : "#f00, #0f0, #00f",
+    //     font : "dotum"
+    //     overflow; "sadsad"
+    // }
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 자바스크립트역할
+HTML제거 콘텐츠 추가 css html 스타일변경 유효성검사 이벤트 웹브라우저 쿠키제어 웹서버 -->
+
+
+<!-- 객체기반,인터프리터(위에서아래로)언어
+
+dom bom javascript
+
+데이터 연산자 제어구조 함수
+
+number string
+
+데이터타입 배열 객체 함수
+== 와 === 데이터타입검사
+문자 + 숫자 = 문자열이된다
+(괄호를 통해 묶는다)
+typeof 타입검사
+    // //선언값을 기억하는 공간 =>스코프-->

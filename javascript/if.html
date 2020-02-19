@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>if(조건문)</h1>")
+        
+        var a = 70;
+        var b = 100;
+        var avg = (a+b)/2; //평균
+        var grap = null; //둥급
+        
+        // 평균 60이상 '합격'
+        // 평균 60미만 '불합격'
+        // a >= 40, b >= 40 
+        // avg > = 6050
+
+
+        // 연산자
+        if(avg >= 60 && (a >=40 && b >= 40) ){
+            document.write("합격")
+
+        }else{
+            document.write("불합격")
+        }
+
+        
+        if(avg >=90){
+                grap = "A";
+        } else if(avg >=80){
+                grap = "B"
+        } else if(avg >=70){
+                grap = "C"
+        } else if(avg >=60){
+                grap = "D"
+        } else{grap = "F"};
+        
+        document.write("<br>"+"평균"+avg+grap+"등급");
+
+
+        
+        var a = prompt("국어점수?");
+        var b = prompt("영어점수?");
+        
+        a =  parseInt(a);
+        b =  parseInt(b);
+        var c = prompt("너의 이름은?")
+        
+        document.write("<h1>Prompt</h1>");
+
+        // 국어:60점 / 영어:80점
+        // 총점:140점 / 평균:70점60
+    
+        // document.write("국어:" + a +"점");
+        // document.write("영어:" + b +"점");
+        // document.write("총점:" + (a + b)+"점");
+        // document.write("<br>"+"평균:" + (a+b)/2 + "점");
+        var d = prompt("다시입력하세요");
+        if(c == "홍길동"){
+        document.write("국어:" + a +"점");
+        document.write("영어:" + b +"점");
+        document.write("총점:" + (a + b)+"점");
+        document.write("<br>"+"평균:" + (a+b)/2 + "점");
+        } else{var d = prompt("다시입력하세요")}if(d == "홍길동"
+        ){
+            
+        document.write("국어:" + a +"점");
+        document.write("영어:" + b +"점");
+        document.write("총점:" + (a + b)+"점");
+        document.write("<br>"+"평균:" + (a+b)/2 + "점");
+        } else{document.write("땡")}
+
+
+        // a= Number(a);
+        // parseInt 80w숫자뒤에 문자가 들어오면 문자를 날려준다.
+        // ★문자와숫자를더하면문자열이된다
+        // number와 parseInt 
+        // -----number는 단순히 숫자만 바꿔주지만
+        // ----8-parseInt는 뒤에 문자를 날려주고 숫자로 바꾼다.
+        
+    </script>
+</body>
+</html>
