@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/*        form input{width:50px;}*/
+    </style>
+</head>
+<body>
+    
+    <style>
+        p label{
+            display: inline-block;
+            width: 20px; height: 20px;
+            background: #080;
+        }
+        
+        input::placeholder{color: #f00;}
+        
+        
+        p input + label{
+            border: 1px solid #f00;
+        }
+        
+        p input:checked + label{
+            background: #f00 url('ic_check.png') center no-repeat;
+        }
+    </style>
+    
+    
+    
+    
+    
+    
+    <form action="폼값을 전달하는 페이지 주소.html" name="member" method="get">
+        <input type="text" placeholder="아이디"
+        required>
+        <p>
+        
+        <input type="checkbox" name="" id="check"
+        checked> 약관동의
+        <label for="check"></label>
+        <input type="submit">
+        </p>
+        
+        
+    </form>
+</body>
+</html>
