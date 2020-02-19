@@ -33,11 +33,14 @@ section nav ul li::after{
     content: "";
     display: block;
     width: 3px;
-    height: 40px;
+    height: 70px;
     background: black;
     position: absolute;
+    top:-20px; left:20px;
     opacity: 0;
 }
-section nav ul li:after:hover a{
+
+section nav ul li:hover:after{
+    transform: translateY(100%);
     opacity: 1;
 }
