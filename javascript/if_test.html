@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -8,30 +8,25 @@
 
 <body>
 
-
 <script>
     
 
-var a = prompt("이름을 입력하세요");
-if(a !== " ")
-{var b = prompt(a +"님 어서오세요")};
-document.write("<h1>"+a+"님 환영합니다"+"</h1>");
-document.write("<h2>화이팅</h2>");
-
-
+var name = prompt("이름을 입력하세요");
+if(name !== " ")
+{var b = prompt(name +"님 어서오세요(아무키입력)")};
 
 
 
 // var a = prompt("아무키나입력하세요");
 
 // if(a !== " ")
-// {var b = prompt("지치고 힘들땐 내게 기대(o키 입력)");
+// {var b = prompt("yes면 o(o키 입력)");
 // if(b == "o")
-// {var c = prompt("언제나 니곁에 서 있을께 혼자라는(o키 입력)");
+// {var c = prompt("yes면 o2222222(o키 입력)");
 // if(c == "o")
-// {var d = prompt("생각이 들지 않게 내가 너의 손 잡아줄께(o키 입력)");
+// {var d = prompt("yes면 o33333333(o키 입력)");
 // if(d == "o")
-// {var e = prompt("o키를입력하세요")
+// {var e = prompt("yes면 o4444444o키를입력하세요")
 // if(e == "o")
 // {alert("^__^");}
 
@@ -41,7 +36,20 @@ document.write("<h2>화이팅</h2>");
 // }else{alert("^^2")}
 // }else{alert("^^")}
 
+var a = prompt("탕수육 게임 시작" +name + "님부터");
 
+if(a == "탕")
+{var b = prompt("수");}
+if(b == "육")
+{var c = prompt("탕");}
+if(c == "수")
+{var d = prompt("육");}
+if(d == "탕")
+{alert("탕수육게임종료")
+document.write("<h2>"+"<mark>" + name + "</mark>"+ "님 탕수육 게임 승리하였습니다."+"</h1>");}
+
+else{alert("땡땡땡")
+document.write("<h2>"+"<mark>" + name + "</mark>"+"님 탕수육 게임 패배하였습니다."+"</h1>");}
 
 
 </script>

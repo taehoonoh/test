@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // switch
+    document.write("<h1>switch</h1>");
+
+    var num = prompt("1~4숫자를 넣으시오");
+
+    var a = null;
+
+    switch(num){
+        // +를 제외한 - * / 는 연산을 하고 +는 문자열 그대로간다
+        // 일정 순서가 있는 html을 조작할때  ex)ul li
+        case '1' : a = num + 10;
+        break;
+        case '2' : a = num - 10;
+        break;
+        case '3' : a = num * 10;
+        break;
+        case '4' : a = num * 10;
+        break;
+
+        // 모두 속하지 않으면 디폴트를 실행하라
+        default : a = num * 100;
+
+    }
+
+    document.write(a);
+
+
+    </script>
+</body>
+</html>
