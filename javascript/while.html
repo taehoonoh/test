@@ -15,11 +15,8 @@
         // num%2 == 0 
         while(num < 100){
             num++;
-            // 2/2 = 0
-            // 3/2 = 1
-            // 4/2 = 0
-            // 5/2 = 1
-            
+           
+    
             if(num%2 == 0 ){
                 // ☆☆조건이 성립하지 않으면 다시 while로
               
@@ -29,7 +26,10 @@
                 // 2+4   6+6       12+8     20 +10
                 // 저장소 = 저장소+짝수값
 
-
+            // 2/2 = 0
+            // 3/2 = 1
+            // 4/2 = 0
+            // 5/2 = 1
                 // sum = sum+num;
                 // 0       0+2
                 // 2       2+4
@@ -52,15 +52,24 @@
        var hole = 0
         var num = 0
         // 1과 0 
+        // num이 100보다 작을때까지 계속실행한다
         while(num < 100){
+            
             num++;
 
+            // 1부터 100
             if(num%2 != 0 ){
+            //    (홀수일경우)
+            c
                 hole++
+                // console.log(hole)
             }
                
         }
         // num을 출력하는지 hole을 출력하는지 모르겠음
+
+
+
         document.write(hole+"<br>");
 
         document.write("<h1>1~100화면출력</h1>")
@@ -73,34 +82,32 @@
             }
 
 
-            document.write("<h1>1,3,5,7..구하라</h1>")
+            // document.write("<h1>1,3,5,7..구하라</h1>")
 
-            var c = 0;
-            while(c <=100){
-                c++;
-                if(c%2 == 0){
-                    document.write("*" + "/");
-                } if(c%2 == 1){
-                    document.write(c +"/");
-                }
-            }
-            document.write("<h1>5,9,13..구하라</h1>")
-
-            var c = 1;
-            while(c <=100){
-                
-                if(c%4 == 0){
-                    document.write(c+1);
-                }
-                c++;
-            }
-
-            // document.write("<h1>3.6,9구하라</h1>")
-
-            // while(c/3 <=100){
-                
-            //     if(c%2 == 0){}
+            // var c = 1;
+            // while(c <=100){
+               
+            //     if(c%2 == 0){
+            //         document.write("*" + "/");
+            //     } if(c%2 == 1){
+            //         document.write(c +"/");
+            //     }
+            //     c++;
             // }
+
+
+
+            // document.write("<h1>3단</h1>")
+
+            // var i = 3;
+            // while(i <=27);{
+            
+            //     i++;
+
+            // document.write(i);
+            // }
+        
+
 
 
         // num = 1;
@@ -109,6 +116,73 @@
         //     document.write(num);
         //     num++;
         // }
+
+
+        document.write("<h1>while문 뿌려주기</h1>");
+
+        var i = 0;
+        // count가 10보다 작을때까지 코드블록을 계속반복실행
+        while(i<10){
+
+            i++;    
+
+            document.write(i)
+            
+    }
+                
+    document.write("<h1>while안에 와일문</h1>");
+
+        var g = 2;
+        // 초기값1
+
+        while(g<10)
+        // 어디까지2
+        {
+            document.write(g);
+            // 반복할일3
+            g+=2;
+            // 2씩 증가한다4
+            
+        
+    }
+
+    document.write("<h1>3단,6단,9단</h1>");
+var g = 3;
+var g6 = 6;
+var g9 = 9;
+// 초기값1
+
+while(g<=30)
+// 어디까지2
+{
+    document.write(g+"<br>");
+    // 반복할일3
+    g+=3;
+    // 3씩 증가한다4
+    
+}
+
+while(g6<=60)
+// 어디까지2
+{
+    document.write(g6+"<br>");
+    // 반복할일3
+    g6+=6;
+    // 6씩 증가한다4
+    
+}
+
+document.write("<h1>3단</h1>");
+
+var i = 1;
+while(i<=18){
+    document.write('3x'+i + "=" + (i*3)+'<br>');
+    i ++;
+}
+
+
+
+
 
     </script>
 </body>

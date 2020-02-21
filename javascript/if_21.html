@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var computer = prompt("컴퓨터");
+        var user = prompt("사용자");
+        var num = [1,2,3];
+        var str = null;
+        var str2 = null;
+
+
+        if(computer == num[0]){
+            str = '주먹';
+        }else if(computer == num[1]){
+            str = '가위';
+        }else if(computer == num[2]){
+            str = '보';
+        }else{alert("1부터3을 입력하세요")}
+    
+        if(user == num[0]){
+            str2 = '주먹';
+        }else if(user == num[1]){
+            str2 = '가위';
+        }else if(user = num[2]){
+            str2 = '보';
+        }
+        else{alert("1부터3을 입력하세요")}
+
+        document.write(str + "vs" + str2);
+        
+        var win = ["컴퓨터","사용자"];
+
+
+        if(str=="주먹" && str2=="가위" || str=="가위"&&str2=="보"||str=="보"&&str2=="주먹"){
+            document.write("<br>"+win[0]+"가 이겼다");
+        }else if(str2=="주먹" && str=="가위" || str2=="가위"&&str=="보"||str2=="보"&&str=="주먹"){
+            document.write("<br>"+win[1]+"가 이겼다");
+        } 
+        else{document.write("<br>"+win[1]+win[0]+"가 비겼다");}
+
+
+
+
+
+
+
+
+        
+        
+
+       
+        
+    </script>
+</body>
+</html>
