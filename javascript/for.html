@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // while
+        // document.write("<h1></h1>");
+
+
+
+
+
+        // var arr = [10,20,80,40,70];
+
+        // var i = 0;
+        // var sum = 0;
+        // while(i < arr.length){
+        //     document.write(arr[i]+"<br>");
+        //     i++;
+        //     // sum+=arr[i];
+        // }
+
+        // document.write(sum);
+
+
+
+        for(var i =0; i<3; i++){
+            // 초기문; 조건문; 증감문
+            // 조건이성립하면 출력-증감-조건-출력-증감-조건-출력-증감
+            document.write(i);
+
+            /*
+                while동일(continue,break)
+            */
+        }
+
+
+
+        document.write("<h1>for문과 배열</h1>");
+
+        var arr = [10,20,80,40,70];
+        var sum = 0;
+        var avg = 0;
+        for(var i=0;i<arr.length;i++){
+
+                sum+=arr[i]
+                avg = sum/arr.length
+        }
+        document.write("총점"+sum+"점"+"/"+"평균"+avg+"점"+"이다")
+
+
+    
+
+
+    </script>
+</body>
+</html>
