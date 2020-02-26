@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 함수종류
+
+function f1(){할일};
+f1();
+
+var 변수명 = function(){};
+
+(funtion(){}); -->
+
+
+<h1>함수</h1>
+  
+
+    <input type="button" value="x+y" onclick="hh2(3,10)">
+
+    <p id = "result">결과값</p>
+
+
+
+
+    <script>
+        // 매개변수 
+    
+    function hh1(x) {
+        var i =0;
+        while(++i<= x){
+        document.write("<br>"+'hello');
+    }};
+
+    hh1(3);
+
+    var result = document.getElementById('result');
+    function hh2(x,y) {
+        
+        // 순차진행
+        result.textContent = x+y;
+        };
+
+   
+
+    function fun3(){
+        console.log(arguments)
+        var sum= 0;
+        for(var i=0;i<arguments.length;i++){
+            sum += arguments[i];
+        }
+        document.write('<br>'+sum);
+    }
+    fun3(70,80,90,60,70,20,30,70);
+
+    
+    function fun4(){
+        console.log(arguments);
+        var sum= 0;
+        for(var i in arguments){
+            for(var i in arguments[i]){
+                sum++;
+
+            }
+            
+        } 
+        
+        document.write('<br>'+sum);
+        
+    }
+
+    var arr = [70,80,90,60,70,20,30,70];
+    var arr2 = [70,80,90,60,70,20,30,70]; 
+
+    fun4(arr,arr2);
+
+
+    
+    // arguments = [70,80,90,60,70,20,30,70]
+    //      //   0   1   2   3   4   5   6   7
+
+    //      arguments = [
+             
+    //          //  0   1   2   3   4   5   6   7
+    //          0    [70,80,90,60,70,20,30,70]
+    //          1    [70,80,90,60,70,20,30,70]
+    //         ] //2차원 배열
+    //         arguments[1][0]
+
+    // for(var i in arguments)
+    // for in 문 for문 while 문
+    
+    </script>
+</body>
+</html>
