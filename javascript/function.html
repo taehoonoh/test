@@ -27,6 +27,17 @@ var 변수명 = function(){};
 
 
     <script>
+        var result = document.getElementById('result');
+            
+            function hh2(x,y) {
+                
+                // 순차진행
+                result.textContent = x+y;
+                };
+
+
+
+
         // 매개변수 
     
     function hh1(x) {
@@ -37,13 +48,7 @@ var 변수명 = function(){};
 
     hh1(3);
 
-    var result = document.getElementById('result');
-    function hh2(x,y) {
-        
-        // 순차진행
-        result.textContent = x+y;
-        };
-
+   
    
 
     function fun3(){
@@ -61,11 +66,15 @@ var 변수명 = function(){};
         console.log(arguments);
         var sum= 0;
         for(var i in arguments){
-            for(var i in arguments[i]){
-                sum++;
+            for(var j in arguments[i]){
+                sum+= arguments[i][j];
+                                // 0   0 
+                                // 0   1
+                                // 0   2
+                                // 0   3
+                                // 0   7
 
             }
-            
         } 
         
         document.write('<br>'+sum);
@@ -93,6 +102,27 @@ var 변수명 = function(){};
     // for(var i in arguments)
     // for in 문 for문 while 문
     
-    </script>
+
+    var name2 = '홍판서'
+
+
+    function fun5(name,...arr){
+        console.log(arr);
+
+        var sum = 0;
+        
+        for(var i in arr){
+         sum += arr[i];
+
+        }
+        document.write("<br>"+name2+sum);
+    }
+    document.write("<br>"+name2)
+    fun5('홍길동',80,70,60,80,90);
+
+    
+
+
+</script>
 </body>
 </html>
