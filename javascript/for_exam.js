@@ -9,7 +9,7 @@
 
 
 
-    function fun(){
+    function fun1(){
 
         var x  = prompt('덧셈 첫번째 숫자를 입력하세요');
         var y  = prompt('덧셈 두번째 숫자를 입력하세요');
@@ -92,19 +92,53 @@ result[2].onclick =()=>{
 
 
 // 랜덤함수
-var ran = Math.floor(Math.random()*43);
-var ran1 = Math.floor(Math.random()*43);
-var ran2 = Math.floor(Math.random()*43);
-var ran3 = Math.floor(Math.random()*43);
-var ran4 = Math.floor(Math.random()*43);
-var ran5 = Math.floor(Math.random()*43);
+// ceil - 실수로 올린다
+// round - 반올림하여 반환
+// floor - 가장큰 정수
 
-console.log(ran)
-console.log(ran1)
-console.log(ran2)
-console.log(ran3)
-console.log(ran4)
-console.log(ran5)
+// var ran = Math.ceil(Math.random()*45);
+var arr =[];
+
+var i =0;
+
+// while(++i <=45){
+//     arr
+//     arr.push(Math.ceil(Math.random()*45));
+// }
+
+while(++i <=45){
+    var num = Math.ceil(Math.random()*45);
+    check(num);
+}
+
+function check(n){
+    var bln = true;
+            //0 1 2 3
+    //arr = [10,25,35,10]
+
+    for(var k in arr){
+        if(arr[k] === n){
+            bln = false;
+            i--;
+            break;
+        }
+    }
+    if(bln) { 
+        arr.push(n) 
+    
+    };
+        
+    //true일때만실행
+}
+console.log(arr)
+
+
+var fun = function(){
+    console.log('함수표현식');
+
+}
+
+fun();
 
 
 
