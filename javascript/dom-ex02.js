@@ -13,35 +13,44 @@ var target = null;
 
 
 
-delInput.addEventListener('click',function(){
+txtList.addEventListener('click',function(a){
+    target = a.target;
+  
 
+    target.style.color = "red"
+  
+    delInput.addEventListener('click',function(){
 
-// 잡아서 클릭하고 삭제를 누르면 타겟삭제
-
-
-//   txtList.innerHTML = null
-
-
-// txtList.removeChild(txtList.lastChild);
+    
+        target.remove();
+      
+    
+    });  
 });
 
 
 
-btnInput.addEventListener('click',function(){
+        // 잡아서 클릭하고 삭제를 누르면 타겟삭제
+        
+        
+        //   txtList.innerHTML = null
+        
+        
+        // txtList.removeChild(txtList.lastChild);
+        
+
+ // target.remove();
+    
+ btnInput.addEventListener('click',function(){
 
     txtList.innerHTML += "<p>"+txtInput.value+"</p>";
 
 });
 
 
-txtList.addEventListener('click',function(a){
 
 
-    var target111 = a.target;
-    target111.remove();
-    // console.log(target111);
-        
-});
+
 
 
 
