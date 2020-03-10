@@ -133,8 +133,6 @@ checkcheck2.onclick = function(){
         }  
         tbody.innerHTML += "<tr><td>"+i+"</td><td>"+name+"</td></tr>";
         i++
-  
-    
 }
 } 
 
