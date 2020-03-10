@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+    <article class="ex">
+        <h2>DOM - 데이터 값 변경</h2>
+        <div>
+            <input class="img-src" type="text" list="src-txt">
+            <datalist id="src-txt">
+                <option>img (1).jpg</option>
+                <option>img (2).jpg</option>
+                <option>img (3).jpg</option>
+            </datalist>
+            <input class="change-btn" type="button" 
+            value="변경">
+
+        </div>
+        <div>
+            <img src="img/img (1).jpg" class="img">
+        </div>
+    </article>
+
+    <article class="ex2">
+        <h2>DOM - 데이터 값 변경</h2>
+        <div class="box">
+            <input type="text" list="src-txt">
+            <datalist id="src-txt">
+                <option>img (1).jpg</option>
+                <option>img (2).jpg</option>
+                <option>img (3).jpg</option>
+            </datalist>
+            <input type="button" 
+            value="변경2">
+
+        </div>
+        <div>
+            <img src="img/img (1).jpg" class="img">
+        </div>
+    </article>
+
+    <article class="ex3">
+        <h2>DOM - 데이터 값 변경</h2>
+        <div class="box">
+            <input class="img-src" type="text" list="src-txt">
+
+            <datalist id="src-txt">
+                <option >img (1).jpg</option>
+                <option>img (2).jpg</option>
+                <option>img (3).jpg</option>
+            </datalist>
+            <select>
+                <option>선모양 선택</option>
+                <option value="dotted">-----------------------</option>
+                <option value="dashed">ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</option>
+                <option value="double">=======================</option>
+            </select>
+            <input type="button" 
+            value="변경3">
+
+        </div>
+        <div>
+            <img src="img/img (1).jpg" class="img">
+        </div>
+    </article>
+    
+
+
+    <script>
+
+        var ex1 = document.querySelector('.ex')
+
+        var btn = ex1.querySelector('.change-btn');
+
+        btn.addEventListener('click',function(){
+            var imgSrc = ex1.querySelector('.img-src');
+            var img = ex1.querySelector('.img');
+            img.src = "img/"+imgSrc.value;
+        
+        }
+        );
+
+        var ex2 = document.querySelector('.ex2')
+
+        ex2.addEventListener('click',function(){
+        var target = event.target;
+
+        if(target.type != 'button'){
+        return;
+        }
+        //console.log('ok')
+        var img = ex2.querySelector('.img');
+        var box = ex2.querySelector('.box');
+        var inputSrc = box.children[0].value;
+
+        img.src = "img/"+ inputSrc
+
+        // box 첫번째 자식의 value 값
+
+
+        // var img = ex2.querySelector('.img');
+
+        // img.src = "img/"+imgSrc.value;
+
+    }
+    );
+
+        var ex3 = document.querySelector('.ex3')
+
+        ex3.addEventListener('click',function(){
+        var target = event.target;
+
+        if(target.type != 'button'){
+        return;
+        }
+        //console.log('ok')
+        var img = ex3.querySelector('.img');
+        var box = ex3.querySelector('.box');
+
+        
+
+        var inputSrc = box.children[0].value;
+
+        img.src = "img/"+ inputSrc
+
+        img.style.borderStyle = box.children[2].value;
+
+        
+
+        // box 첫번째 자식의 value 값
+
+
+        // var img = ex2.querySelector('.img');
+
+        // img.src = "img/"+imgSrc.value;
+
+        }
+        );
+    </script>
+</body>
+</html>

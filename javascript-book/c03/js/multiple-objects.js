@@ -6,8 +6,17 @@ function Hotel(name, rooms, booked) {
   this.checkAvailability = function() {
     return this.rooms - this.booked;
   };
+  // 메소드
 }
 
+function aaa(a,b){
+  
+  a+b;
+
+}
+aaa(10,20);
+//return 
+console.log(aaa(10,20));
 
 // Create two hotel objects
 var quayHotel = new Hotel('Quay', 40, 25);
@@ -17,11 +26,19 @@ var parkHotel = new Hotel('Park', 120, 77);
 // Update the HTML for the page
 var details1 = quayHotel.name + ' rooms: ';
     details1 += quayHotel.checkAvailability();
+
+
 var elHotel1 = document.getElementById('hotel1');
 elHotel1.textContent = details1;
 
+
+
+
+
 var details2 = parkHotel.name + ' rooms: ';
     details2 += parkHotel.checkAvailability();
+
+
 var elHotel2 = document.getElementById('hotel2');
 elHotel2.textContent = details2;
 
