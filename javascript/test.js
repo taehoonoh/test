@@ -46,15 +46,21 @@ var li = document.querySelectorAll('.faq li')
 
 var liDiv = document.querySelectorAll('.faq li div');
 
-var faq = document.querySelectorAll('.faq')
+var faq = document.querySelectorAll('.faq');
 
-for(var i = 0; i<li.length; i++){
-    li[i].addEventListener('click',function(e){
-        var add = e.target.querySelector('div');
-        
+for(var i =0; i<3; i++){
 
-       
-            add.classList.toggle('on');
+
+li[i].addEventListener('click',function(){
+    
+    // for(var k=0; k<3; k++){
+    //     liDiv[k].classList.remove('on');
+    // }
+    
+    liDiv.classList.add('on');
+})
+
+};
 
         
 
@@ -64,8 +70,3 @@ for(var i = 0; i<li.length; i++){
         
 
     
-
-    });
-};
-
-
