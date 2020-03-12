@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<button>요청(팝업)</button>
+
+
+<div class="pop">
+    이벤트 상세 내용
+</div>
+
+
+<style>
+    .pop{display: none;}
+    .on{display: block;}
+</style>
+
+    <script>
+    
+    var btn = document.querySelector('button');
+
+
+   
+
+    btn.addEventListener('click',function(){
+        document.querySelector('.pop').classList.toggle('on');
+        
+       
+    });
+    
+
+    </script>
+    <!-- click, scroll, mouseover, onmouseout
+                        mouseenter, mouseleave -->
+</body>
+</html>
