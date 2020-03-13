@@ -77,31 +77,42 @@ window.addEventListener('DOMContentLoaded',function(){
     var tab = ex2.querySelectorAll('ul li');
 
     var tabCon = ex2.querySelectorAll('.box .tab-con');
-  
-    var tabLi = ex2.querySelectorAll('.tab li');
+    
+    var j = 0;
 
 
-    for(var i =0; i<3; i++){
+    for(let i =0; i<tab.length; i++){
 
         tab[i].addEventListener('click',function(){
             
-            for(var i =0; i<3; i++){
-                tab[i].classList.remove('active');
-            }
-            // var haha = ex2.querySelector('.active');
-
-            // if(haha.classList.contains('active')){
-            //     haha.classList.remove('active');
+            // for(let i =0; i<tab.length; i++){
+            //     tab[i].classList.remove('active');
+            //     tabCon[i].classList.remove( 'active');
             // }
-
+            tab[j].classList.remove('active');
+            tabCon[j].classList.remove( 'active');
 
             this.classList.add('active');
+            tabCon[i].classList.add('active');
+
+            j=i;
+
         })
 
 
         
     }
 
+
+ // var haha = ex2.querySelector('.active');
+
+            // if(haha.classList.contains('active')){
+            //     haha.classList.remove('active');
+            // }
+
+
+
+            
 
     // tab[0].addEventListener('click',function(){
 
@@ -125,10 +136,48 @@ window.addEventListener('DOMContentLoaded',function(){
     // });
 
 
+    
+
+    var ex3 = document.querySelector('#ex3')
+    var thum = ex3.querySelectorAll('.thum img');
+    var detail = ex3.querySelector('.detail img')
+
+
+    
+    for(var i =0; i<thum.length; i++){
+
+        //console.log(thum[i]);
+    thum[i].addEventListener('click',function(){
+
+        for(var i =0; i<thum.length; i++){
+         
+         
+            thum[i].classList.remove('active');
+    
+
+            
+        }         
+
+        detail.src = this.src;
+
+        this.classList.add('active');
+        // detail[0].setAttribute('src','img/img-02.jpg');   
+    });   
+    
+    
+   
+    
+};
+    
+   
+    
+    //this.classList.remove('active');
+
+        
 
 
 
-
+        
 
 
 
