@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/img-01.jpg" alt =""class="i-n">
+    <img src="img/img-02.jpg" alt="" class="i-n">
+    <img src="img/img-03.jpg" alt="" class="i-n">
+
+
+
+    <script>
+    
+    var imgNode = document.querySelectorAll('.i-n');
+
+    var arr = [];
+
+    for(var i = 0; i<imgNode.length; i++){
+
+        arr.push(imgNode[i]);
+
+        
+    };
+
+    console.log(arr);
+    
+    arr[1].remove();
+    // remove는 Node 만!!!!!!!!!!!
+
+   
+
+
+    </script>
+</body>
+</html>

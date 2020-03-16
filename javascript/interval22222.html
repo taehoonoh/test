@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        nav{
+            background: #000;
+            left: 0; top: 0;
+            color: #fff;
+            width:100%;
+            position: fixed;
+      
+            
+        }
+
+        div{height: 100vh; text-align: center;
+           
+  }
+        div:nth-of-type(2){
+            background: yellow;
+        }
+        div:nth-of-type(3){
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a data-id=0>navi01</a>
+        <a data-id=1>navi02</a>
+    </nav>
+
+    <div class="con1">con1</div>
+    <div class="con2">con2</div>
+    <div class="con3">con3</div>
+    
+
+    <script>
+        var idx = 0;
+        var nav = document.querySelector('nav');
+        var con0 = document.querySelector('.con1');
+        var con1 = document.querySelector('.con2');
+
+        var lastId = 0;
+
+        nav.addEventListener('click',function(e){
+            e.preventDefault();
+         
+              var id = e.target.dataset.id;
+             
+              var con =  eval('con'+id)
+              
+            //   문자를 변수 eval
+
+            var inter = setInterval(function(){
+
+               idx += 5;
+               window.scrollTo(0,con.offsetTop);
+            },0);
+
+         
+            
+
+        });
+
+        // if(id>lastId){
+                        //아래로내려감
+        //     if(con.offsetTop> = window.scrollY)
+        //     {
+        //         idx +=10;
+        //     } else{
+        //         clearInterval(inter);
+        //     }
+        // } else{
+                        //위로 올라감
+        //     if(con.offsetTop < window.scrollY){
+        //         idx -=10;
+        //     }else{
+        //         clearInterval(inter);
+        //     }
+        // }
+    </script>
+
+
+
+</body>
+</html>
