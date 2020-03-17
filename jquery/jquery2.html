@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //$('선택자').메소드();
+
+            $('.box').css({
+                width:100,
+                height:100,
+                background:'darkred'
+            });
+
+            var count = 0;
+            $(' .basic button').on('click',function(){
+
+                var $this = $(this).index();
+                
+                console.log($this);
+
+                // 만약 0과 같으면 우측
+                if($this == 0){
+                    count +=50;   
+                // 같지않으면 좌측
+                }else{
+                    count -=50;
+                }
+                
+                $('.box').animate({
+                    marginLeft: count
+                },500);
+                
+
+            });
+
+
+            $('.btn button').on('click',function(){
+
+     
+                $('.btn .nav').toggleClass('active');
+            });
+
+
+            //     var leftCalc = 0;
+            //     var txt = '닫기';
+            //     var aaa = $('.btn button').text();
+
+                
+
+            //     if(!$(this).hasClass('active')){
+            //         leftCalc = -600;
+            //         txt = '메뉴';
+            //     }
+
+
+            // $('.nav').animate({
+            //     left : leftCalc
+            // },700,function(){
+            //     $('.btn button').text(txt);
+            // });
+            
+            // });
+           
+           
+
+        });
+
+    
+
+    </script>
+    
+
+</head>
+<body>
+    <div class="basic">
+        <button>우측</button>
+        <button>좌측</button>
+        <div class="box">콘텐츠</div>
+
+    </div>
+
+
+    <div class="btn">
+        <button>메뉴</button>
+        <div class="nav">네비게이션</div>
+    </div>
+
+    <style>
+        .btn{margin:100px 0; position: relative;}
+        .nav{background:#ddd; padding:100px; display:inline-block;
+        position: absolute;
+        left:0px; top:50px;
+        transition: .5s;}
+
+      
+      
+    </style>
+</body>
+</html>

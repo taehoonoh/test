@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // start
+
+            var imgArray = [
+            'img/img01.jpg',
+            'img/img02.jpg'];
+    
+
+            
+            for(var i =0; i<imgArray.length;i++){
+            var tag = "<img src="+imgArray[i]+">";
+
+            $('.each').append(tag)
+        };
+
+        $('.each img').each(function(k){
+                $(this).delay(500*k).fadeIn();
+            });
+           
+        
+            $('.pop').hide();
+            $('.each img').on('click',function(){
+                $('.pop img').attr('src','img/img01.jpg');
+
+                $('.pop').show();
+            })
+
+            //이미지를 클릭하면 팝업을 show or fadeIn
+
+
+
+
+        });
+        // attr = getAttribute 속성을 변경한다
+        // append() 추가
+        // each() 선택자의 개수만큼 구문 실행
+        // delay() 애니메이션 앞에서 사용 가능 
+        
+    </script>
+</head>
+<body>
+    
+    <div class="each">
+        <img src="img/img-01.jpg" alt="">
+        <img src="img/img-02.jpg" alt="">
+        <img src="img/img-03.jpg" alt="">
+        <a href="http://www.google.com">링크바로가기</a>
+ 
+    </div>
+
+    <div class="pop"><img></div>
+
+    <style>
+        .each{
+            display: flex;
+            flex-wrap: wrap;
+       
+        }
+        img{
+            width: 300px; height: 200px;
+            display: none;
+            
+        }
+        .pop {
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            position: fixed; left: 0; top: 0;
+        }
+    </style>
+</body>
+</html>

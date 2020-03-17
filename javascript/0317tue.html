@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="g01"></div>
+    <div class="g02"></div>
+
+
+    <style>
+        div{
+            height: 20px; margin-top: 10px; background: #ddd;
+        }
+    </style>
+
+
+    <script>
+        // 코드 중복 ,재실행
+
+        var g01 = document.querySelector('.g01');
+        var g02 = document.querySelector('.g02');
+
+        
+    // 함수표현식
+        var fun = function(x,y){
+            g01.style.width = 100+"%";
+            g02.style.width = 100+"%";
+            // 실행 명령 , 시간ms
+
+            var i = 0;
+            var j=0;
+            var loop = setInterval(function(){
+                //60이될때까지 증감
+                //80이될때까지 증감 
+                if(i <x )i++;
+                if(j <=y)j++;
+                g01.textContent = i+"%";
+                g01.style.width = i+"%";
+                g02.textContent = j+"%";
+                g02.style.width = j+"%";
+            },50);
+
+            setTimeout(function(){
+                clearInterval(loop);
+            },5000)
+            
+
+            //Math.max(x,y);
+          
+                 
+        }
+        fun(60,80);
+
+
+        // 클릭했을때,마우스올리면,드래그,스크롤 실행 fun (60,80);
+    </script>
+</body>
+</html>

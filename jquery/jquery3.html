@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.fade img').not(':first').hide();
+            
+            var idx = 0, inter;
+            function loop(){
+            inter = setInterval(function (){
+
+                $('.fade img').eq(idx).fadeOut(2000);//012012012
+                idx++;
+                if(idx ==3){
+                    idx=0;
+                }
+                $('.fade img').eq(idx).fadeIn(2000);//120120120
+               
+            },2000);
+        };
+        loop();
+
+
+            $('.fade').on('mouseover',function(){
+                console.log(this);
+                clearInterval(inter);
+        
+            })
+            // mouseover,mouseenter,mouseleave.mouseout
+            $('.fade').on('mouseout',function(){
+                console.log(this);
+                loop();
+        
+            })
+    
+
+          
+      
+
+
+        });
+
+
+    </script>
+    
+
+</head>
+<body>
+   <div class="fade">
+       <img src="img/img-01.jpg" alt="">
+       <img src="img/img-02.jpg" alt="">
+       <img src="img/img-03.jpg" alt="">
+
+   </div>
+
+   <style>
+       img{
+           width:600px; height: 400px;
+           position: absolute;
+           left: 0; top:0;
+       }
+   </style>
+</body>
+</html>

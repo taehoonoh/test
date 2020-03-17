@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fade">
+        <img src="../img/img (1).jpg" alt="">
+        <img src="../img/img (2).jpg" alt="">
+        <img src="../img/img (3).jpg" alt="">
+    </div>
+    <style>
+
+        div img{width:600; height: 300px;
+        position: absolute;
+        left: 0; top:0;}
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $('div img').not(':first').hide();
+
+    // $('div img').eq(0).fadeOut(2000);
+    // $('div img').eq(1).fadeIn(2000);
+    var th=0;
+    var stop;
+    
+    function loop(){
+        stop = setInterval(function(){
+
+        $('div img').eq(th).fadeOut(2000);
+        th++;
+        if(th == 3){
+            th=0;
+        }
+        $('div img').eq(th).fadeIn(2000);
+        },2000);
+    }
+    loop();
+  
+    $('div img').on('mouseover',function(){
+        
+         clearInterval(stop);
+         
+    });
+       
+        
+    $('div img').on('mouseout',function(){
+        console.log(this);
+        loop();
+       });
+</script>
+
+
+
+
+<!-- <script>
+    var fade = document.querySelector('.fade');
+    var fimg = document.querySelectorAll('.fade img');
+
+    var th =0;
+    var stop;
+
+    function loop(){
+        stop = setInterval(function{
+            for(var i = 0;i<fimg.length;i++){
+
+                fimg[i].style.opacity="0";
+            
+                if(i==3){
+                    i=0;
+                }
+                fimg[i].style.opacity ="1";
+            }
+
+        },2000)
+    } ;
+</script> -->
+
+
+</body>
+</html>
