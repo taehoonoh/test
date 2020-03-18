@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab p a {border:1px solid; padding:20px;
+        display: inline-block;}
+        .tab p a.active{background: yellow;}
+        .con{position: relative;}
+        .con div {
+            border:1px solid; padding:100px;
+            display: none;
+        }
+
+        .con div.active{display:block;
+        width: 1000px;}
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <p>
+            <a class="active" href="">tap01</a>
+            <a href="">tap02</a>
+            <a href="">tap03</a>
+        </p>
+        <div class="con">
+            <div class="active">con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con01con</div>
+            <div>이것은 tap menu 컨텐츠 두번째 두번째이것은 tap menu 컨텐츠 두번째 두번째이것은 tap menu 컨텐츠 두번째 두번째이것은 tap menu 컨텐츠 두번째 두번째이것은 tap menu 컨텐츠 두번째 두번째이것은 tap menu 컨텐츠 두번째 두번째 </div>
+            <div>con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03con03</div>
+        </div>
+    </div>
+    
+    <script>
+
+        var tabButton = document.querySelectorAll('.tab p a');
+        var content = document.querySelectorAll('.con div');
+
+
+      
+        for(let i =0; i<tabButton.length;i++ ){
+
+            tabButton[i].addEventListener('click',function(e){
+               
+               e.preventDefault();
+
+               for(let i = 0; i<tabButton.length; i++){
+                tabButton[i].classList.remove('active');
+                content[i].classList.remove('active');
+
+               }
+               tabButton[i].classList.add('active');
+               content[i].classList.add('active');
+               
+            }); 
+           
+            
+        };
+
+
+
+
+
+
+
+      
+
+
+
+    </script>
+</body>
+</html>
+<!-- //1.슬라이드(시간오래걸림,난이도높)
+//2.페이드인 페이드아웃
+//3.탭 O
+//4.메뉴 = 서브메뉴 , 버거메뉴
+//5. 팝업 = 자세히보기,공지팝업(오늘하루보기)
+//6. 스크롤제어 -->
+
+
+<!-- 버블링 자식에서 외곽 부모로 퍼져나가는방식 -->
+<!-- 캡쳐링 부모에서 자식 퍼져나가는방식 -->

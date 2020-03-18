@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 클릭하면 부드럽게 스크롤 이동 
+            $('header a').on('click',function(){
+
+                var idx = $(this).index();
+                var offsetTop = $('.con').eq(idx).offset().top;
+                var headHeight = $('header').innerHeight();
+                
+                $('html').animate({
+                    scrollTop : offsetTop -headHeight
+                });        //css 41- header높이 41
+            
+                
+              
+
+                
+            
+            });
+
+            // $(window).on('scroll',function(){
+            //     $('.con').each(function(i){
+
+                    
+            //         var conOffset =$('.con').eq(i).offset().top;
+            //         var wScroll =$(window).scrollTop();
+                    
+            //         if(wScroll/1.5> conOffset){
+
+
+                        
+            //             console.log(conOffset);
+
+
+
+            //             $('header a').eq(i).addClass('active')
+            //             .siblings().removeClass('active');
+                        
+            //         };
+            //     })  
+            //     });
+
+
+
+
+
+});
+   </script>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="active">Navi01</a>
+            <a>Navi02</a>
+            <a>Navi03</a>
+            <a>Navi04</a>
+        <!-- 0 1 2 3 -->
+        </nav>
+    </header>
+    <section class='con'>contents_01</section>
+    <section class='con'>contents_02</section>
+    <section class='con'>contents_03</section>
+    <section class='con' >contents_04</section>
+<!-- 0 1 2 3 -->
+    <style>
+        header{background: #ddd; padding: 10px 0;
+        position: fixed; top:0; left: 0; width: 100%; text-align: center;}
+        header a.active{background: #00f;
+        color: white;}
+        section{height: 900px; margin-top: 41px;}
+        section:nth-of-type(even){background: #eee;}
+        
+    </style>
+</body>
+</html>

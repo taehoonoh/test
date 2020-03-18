@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+
+    
+            // 1.헤더가 상단으로 부터 위치하고 수치
+            var headOffset = $('header').offset().top;
+
+            // 2.스크롤 이벤트발생
+
+            $(window).on('scroll',function(){
+            // 3. 헤더와 스크롤 수치를 비교
+                console.log(headOffset)
+                console.log($(window).scrollTop())
+                if(headOffset <= $(window).scrollTop()){
+                    $('header').addClass('active');
+                }else{
+                    $('header').removeClass('active');
+                }
+            // 4. 헤더에 active 클래스를 추가 또는 삭제
+                
+            });
+
+});
+   </script>
+</head>
+<body>
+    <div class='bn'>
+  banner
+    </div>
+    <header>
+        <nav>
+            <a>Navi01</a>
+            <a>Navi02</a>
+            <a>Navi03</a>
+            <a>Navi04</a>
+        </nav>
+    </header>
+    <section class='con'>contents_01</section>
+    <section class='con'>contents_02</section>
+    <section class='con'>contents_03</section>
+    <section class='con' >contents_04</section>
+    <style>
+        header{background: rgb(246, 1, 165); padding: 10px 0;
+        position: relative; top:0; left: 0; width: 100%; text-align: center;}
+        header.active{position: fixed;
+        top:0; left: 0;}
+        section{height: 900px; margin-top: 41px;}
+        section:nth-of-type(even){background: #eee;}
+        .bn{height: 200px;background: rgb(10, 0, 97)}
+    </style>
+</body>
+</html>
