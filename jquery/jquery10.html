@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+        
+            var firstCount = 0;
+            var lastCount = 0;
+
+            $(window).on('scroll',function(){
+                firstCound = $(this).scrollTop();
+                
+                console.log("first"+firstCount);
+                console.log("last"+lastCount);
+
+                if(firstCount > lastCount){
+                    // 스크롤을아래로내림
+                    console.log('내림')
+                }else{
+                    // 스크롤을 위로올
+                    림
+                    console.log('올림')
+                }
+                lastCount = firstCount;
+              
+
+
+            })
+  
+
+});
+   </script>
+ 
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+  <style>
+      div{width:200px; height: 200px;}
+  </style>
+</body>
+</html>
