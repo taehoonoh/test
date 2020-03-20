@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{margin:0}
+.box{width:100%}
+div{width:50%; 
+height:100%;
+float: left; 
+background:darkgray;
+transition:.5s}
+
+div:nth-of-type(2) {
+    background :#ddd; 
+}
+.active{width:100%}
+.hidden{width: 0;}
+.cursor{
+    width:20px; height: 20px;;
+}
+.img{position: fixed;
+z-index: 3;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+    </style>
+</head>
+<body>
+
+<div class="cursor"></div>
+
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+
+    <script>
+        window.addEventListener('click',function(e){
+            console.log(e.pageX);
+            console.log(e.pageY);
+
+            var div = document.querySelectorAll('.box div')
+            var idx =0;
+            var hidden = 0;
+            var visible = 0;
+
+            if(window.innerWidth /2 <e.pageX){
+                console.log('우측');
+
+                hidden = 0;
+                visible = 1;
+
+            }else{
+                console.log('좌측');
+                hidden = 1;
+                visible = 0;
+            }
+
+                div[0].classList.add('hidden');
+                div[1].classList.add('active');
+
+        });
+
+        var cursor = document.querySelector('.cursor');
+        var img = document.querySelector('.img');
+
+        window.addEventListener('mousemove',function(e){
+            cursor.style.left = e.pageX+'px';
+            cursor.style.top = e.pageY+'px';
+
+            k++;
+            img.src = 'p'+k+'.jpg';
+
+        })
+
+    </script>
+</body>
+</html>
