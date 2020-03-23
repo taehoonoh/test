@@ -5,18 +5,14 @@ var container = document.querySelector('.container');
 var bt = pop.querySelectorAll('a')
 
 
-
 var imgList = container.querySelectorAll('.gallery img');
 var imgFig = container.querySelectorAll('figcaption');
 
 
-
 popImg.addEventListener('click',function(){
 
-   pop.classList.remove('ly-pop')
+   pop.classList.remove('ly-pop');
 });
-
-
 
 // popup
 for(let i =0; i<imgList.length; i++){
@@ -30,11 +26,11 @@ imgList[i].addEventListener('click',function(){
 
 // prev
 bt[0].addEventListener('click',function(){
-for(var k=0; k<imgList.length;k++){
-
+for(let k=0; k<imgList.length;k++){
 
 popImg.src = imgList[k].src
 
+console.log(imgList[k]);
 popFig.textContent = imgFig[k].textContent
 }
 });
@@ -49,7 +45,3 @@ for(var k=0; k<imgList.length;k--){
 
 });
 
-//var omg = 'O M G' 
-
-// if(오태훈<60){재평가를 보겠습니다..}
-//else{}

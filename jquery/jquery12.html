@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+    <title>12</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
 
      $(function(){
-      
+
+
+      var move = 0;
+      var num = 0;
+      var bln = true;
+      $('html').scrollTop(0);
+
+      $('section div').on('mousewheel',function(e){
+ 
+        var delta = e.originalEvent.wheelDelta;
+        if(bln){
+            bln = false;
+            if(delta<0){
+                num++;
+            } else{
+                num--;
+            }
+
+            move = num * $(window).height();
+
+            $('section').animate({
+                top:-move
+            },1000,function(){bln = true});
+        }
+
+
+      });
 
     });
     </script>
@@ -39,9 +65,21 @@
             }
         </style>
 
+        
+
 </body>
 </html>
 
 <!-- 제이쿼리 블로그참고
 
 https://araikuma.tistory.com/category/jQuery?page=2-->
+
+<!--총 컨텐츠 길이 
+        
+            뷰포트제외
+
+                뷰포트
+    
+            뷰포트 제외 
+            
+    -->

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+
+     $(function(){
+    
+        //   console.log('clientX= '+e.clientX);
+        //   뷰포트(보여지는) 높이 
+        //   console.log('pageY= '+e.pageY);
+        //   문서전체 높이
+        //   console.log('offesetY= '+e.offsetY);
+        //   해당요소부터 커서위치
+
+        var parentNode = $('section');
+        var dragBln;
+        var offset ={x:0,y:0};
+        
+        var aa,bb;
+
+
+        parentNode.on('mousedown',function(e){
+            dragBln = true;
+            aa = e.offsetX;
+            bb = e.offsetY;
+        });
+        parentNode.on('mousemove',function(e){
+            dragBln = true;
+
+            offset.x = e.offsetX;
+            offset.y = e.offsetY;
+        });
+            if(dragBln){
+                console.log('드래그중...');
+              
+                offset.x = e.offsetX -aa
+                offset.y = e.offsetY -bb ;
+                console.log(offset.x);
+
+                if(dragBln){
+
+                
+                if(e.target.nodeName != "DIV"){
+                    return;
+                }
+
+                $('section div').css({
+                    left:e.pageX - offset.x,
+                    top:e-pageX - offset.y,
+                });
+            }
+        }
+        parentNode.on('mouseup',function(e){
+            console.log('누름해제')
+            dragBln =false;
+
+        });
+ 
+
+
+    });
+    </script>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>    
+
+        <style>
+            *{margin:0;}
+            body{}
+            section{position: relative;}
+            height: 2000px;
+            border:{5px solid red;}
+            div{
+                width:100px; height: 100px;
+                background: darkslategray;
+                align-items: center;
+                font-size: 5em;
+                position: absolute;
+                top:1000px
+            }
+            div:nth-of-type(even){
+                background: whitesmoke;
+            }
+        </style>
+
+        
+
+</body>
+</html>

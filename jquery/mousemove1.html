@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+
+     $(function(){
+        
+      $(window).on('mousemove',function(e){
+        
+        //   console.log('clientX= '+e.clientX);
+        //   뷰포트(보여지는) 높이 
+        //   console.log('pageY= '+e.pageY);
+        // //    문서전체 높이
+        //   console.log('offesetY= '+e.offsetY);
+        //   //해당요소부터 커서위치
+        if($(window).width()/2 > e.clientX){
+            console.log('좌측')
+        }else{
+            console.log('우측')
+        }
+      
+      });
+
+
+    });
+    </script>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>    
+
+        <style>
+            *{margin:0;}
+            body{}
+            section{position: relative;
+            height: 2000px;
+            border:5px solid red;}
+            div{
+                width:100px; height: 100px;
+                background: olive;
+                align-items: center;
+                font-size: 5em;
+                position: absolute;
+                top:1000px
+            }
+            div:nth-of-type(even){
+                background: whitesmoke;
+            }
+        </style>
+
+        
+
+</body>
+</html>
