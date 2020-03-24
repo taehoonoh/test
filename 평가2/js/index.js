@@ -12,6 +12,7 @@ var imgFig = container.querySelectorAll('figcaption');
 popImg.addEventListener('click',function(){
 
    pop.classList.remove('ly-pop');
+
 });
 
 // popup

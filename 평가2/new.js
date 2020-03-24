@@ -18,7 +18,10 @@ var txtNode = target.querySelector('figcaption');
 });
 }
 
-
+//e.preeventDefalut();
+//e.stopPropagation();
+//nextElementSibling
+//previousElementSibling
 
 
 // figure img
