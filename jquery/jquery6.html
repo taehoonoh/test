@@ -7,23 +7,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(function(){
-            // 클릭하면 부드럽게 스크롤 이동 
-            $('header a').on('click',function(){
+            // // 클릭하면 부드럽게 스크롤 이동 
+            // $('header a').on('click',function(){
 
-                var idx = $(this).index();
-                var offsetTop = $('.con').eq(idx).offset().top;
-                var headHeight = $('header').innerHeight();
+            //     var idx = $(this).index();
+            //     var offsetTop = $('.con').eq(idx).offset().top;
+            //     var headHeight = $('header').innerHeight();
                 
-                $('html').animate({
-                    scrollTop : offsetTop -headHeight
-                });        //css 41- header높이 41
-            
-                
-              
+            //     $('html').animate({
+            //         scrollTop : offsetTop -headHeight
+            //     });        //css 41- header높이 41
 
-                
             
-            });
+            // });
+
+                var btn = document.querySelectorAll('a');
+                var con = document.querySelectorAll('.con');
+                
+                // console.log(con[1].offsetTop);
+                console.log(con[1].offsetTop);
+                
+                btn[0].addEventListener('click',function(){
+
+                window.scrollTo(0,0)
+                })
+
+               btn[1].addEventListener('click',function(){
+
+                window.scrollTo(0,941)
+               })
+
+               btn[2].addEventListener('click',function(){
+
+                window.scrollTo(0,1882)
+               })
+
+               btn[3].addEventListener('click',function(){
+
+            window.scrollTo(0,2823)
+})
+
+
+
+        });
+    
 
             // $(window).on('scroll',function(){
             //     $('.con').each(function(i){
@@ -51,7 +78,7 @@
 
 
 
-});
+
    </script>
 
 </head>
@@ -61,17 +88,23 @@
         <nav>
             <a class="active">Navi01</a>
             <a>Navi02</a>
-            <a>Navi03</a>
-            <a>Navi04</a>
+            <a >Navi03</a>
+            <a >Navi04</a>
         <!-- 0 1 2 3 -->
         </nav>
     </header>
-    <section class='con'>contents_01</section>
-    <section class='con'>contents_02</section>
-    <section class='con'>contents_03</section>
+    <section class='con' >contents_01</section>
+    <section class='con' >contents_02</section>
+    <section class='con' >contents_03</section>
     <section class='con' >contents_04</section>
 <!-- 0 1 2 3 -->
     <style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+
         header{background: #ddd; padding: 10px 0;
         position: fixed; top:0; left: 0; width: 100%; text-align: center;}
         header a.active{background: #00f;

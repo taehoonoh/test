@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+     $(function(){
+        $('.drag img').on('dragstart touchstart',function(){
+            console.log('touchstart');
+        });
+        
+        var drag = document.querySelector('.drag img');
+        var drop = document.querySelectorAll('.drop');
+
+        // drag.addEventListener('dragstart',function(){
+        //     console.log('dragStart');
+        //     // setTimeout(function(){
+
+        //     //     drag.classList.add('visible');
+        //     // },1000)
+        //     //     drag.classList.remove('visible');
+        // })
+
+        // drag.addEventListener('dragend',function(){
+        //     // console.log('dragEnd');
+        //     drag.classList.remove('visible');
+        // })
+
+        
+
+        // // drop.addEventListener('dragover',function(e){
+        // //     e.preventDefault();
+        // //     console.log('dragover');
+        // // });
+
+        // // drop.addEventListener('dragenter',function(){
+        // //     console.log('dragenter');
+        // //     drop.classList.add('active');
+        // // });
+
+        // // drop.addEventListener('dragleave',function(e){
+        // //     console.log('dragleave');
+        // //     drop.classList.remove('active');
+          
+        // // });
+
+        // // drop.addEventListener('drop',function(){
+        // //     console.log('drop');
+        // //     this.append(drag);
+          
+        // // });
+
+
+
+
+        for(var i =0; i<drop.length;i++){
+            drop[i].addEventListener('dragover',dragover);
+            drop[i].addEventListener('dragenter',dragenter);
+            drop[i].addEventListener('dragleave',dragleave);
+            drop[i].addEventListener('drop',dragDrop);
+        }
+
+
+        function dragover(e){
+            e.preventDefault();
+            // console.log('over');
+            
+        }
+
+        function dragenter(e){
+            e.preventDefault();
+            //console.log('dragenter');
+        }
+
+        function dragleave(e){
+           // this.classList.remove('active');
+        }
+
+        function dragDrop(e){
+            console.log('drop');
+            this.append(drag);
+            drag.classList.remove('active');
+            this.classList.remove('active');
+        }
+
+
+
+        /*
+         touchstart
+         touchend
+         touchmove
+         touchcancel
+        */
+
+
+
+
+
+
+
+
+    });
+    </script>
+</head>
+<body>
+
+    <ul class="drag" draggable="true">
+        <li class="drop">
+            <img src="img/img01.jpg" alt="">
+        </li>
+        <li class="drop"></li>
+        <li class="drop active"></li>
+        <li class="drop"></li>
+        <li class="drop"></li>
+
+    </ul>
+    <div class="drop">
+
+
+    </div>
+
+
+
+<style>
+
+
+    .drag{
+        width:600px; margin:0 auto;
+        display: flex;
+        justify-content: space-between;
+        list-style: none; margin: 0; padding: 0; 
+    }
+    .drag li{
+        width:100px; height: 100px;
+        border: 1px solid #aaa;
+    }
+
+    .drag li.active{border-style: 1px dashed rgb(235, 73, 73);}
+    .drag li img{width:100%; height: 100%;}
+    .drag li img.active{display:none;}
+</style>
+
+</body>
+</html>
+
