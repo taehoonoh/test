@@ -1,0 +1,295 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* -------------------------- */
+body {
+	background: darkgray
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	height: 100px;
+
+}
+
+.header1 {
+	position: fixed;
+	width: 100%;
+	z-index:1;
+}
+
+header h1 {
+	font-size: 2em;
+	font-family: "Century Gothic";
+}
+header h1 strong{
+	font-weight: bold;
+	font-family: "Brandon Grotesque Bold";
+}
+header nav {
+	font-size: 1.1em;
+}
+
+.header1 nav a {
+	margin-left: 15px;
+
+}
+
+
+.hText {
+	color: white;
+	font-size: 4.3em;
+	padding-top: 250px;
+	padding-left: 200px;
+	font-weight: bold;
+}
+
+em {
+	position: absolute;
+	color: white;
+	bottom: 150px;
+	left: 45%;
+	font-size: 2em;
+}
+
+
+/* 비디오 */
+.videoB {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.videoB #videoBG {
+	position: fixed;
+	width: 100%;
+	z-index: -2;
+	top: 0;
+}
+
+
+.about {
+	width: 1200px;
+	margin:1000px 360px 0 360px;
+	opacity: .8;
+	color: white;
+	text-align: center;
+	background: black;
+	font-size: 1.2em;
+}
+
+
+
+.about strong {font-weight: bold;
+	text-decoration: underline;}
+
+
+.character{
+	width: 1200px;
+	margin:500px 360px 500px 360px;
+	color: white;
+	opacity: .8;
+	text-align: center;
+	background: black;
+	font-size: 1.2em;
+}
+.character strong{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.character figure{
+}
+.character figure img{
+	width:200px;
+	padding-top: 20px;
+	border-radius: 50px;
+}
+/* -------------------- */
+.ost{
+	width: 1200px;
+	margin:500px 360px 500px 360px;
+	color: white;
+	opacity: .8;
+	text-align: center;
+	font-size:1.8em;
+}
+.ost strong{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.ost figure{
+}
+
+.ost figure img{
+	width:200px;
+}
+/* --------------- */
+.scene{
+	width: 1200px;
+	margin:500px 360px 500px 360px;
+	color: white;
+	opacity: .8;
+	text-align: center;
+	background: black;
+	font-size: 1.2em;
+	display: flex;
+}
+
+
+.scene strong{
+	font-weight: bold;
+}
+
+.scene figure{
+}
+
+.scene figure img{
+width: 250px;
+}
+
+/* 푸터입니다 */
+footer{background: black;
+width: 100%;
+height:200px}
