@@ -18,8 +18,8 @@
             $(window).on('scroll',function(){
             // 3. 헤더와 스크롤 수치를 비교
                 console.log(headOffset)
-                console.log($(window).scrollTop())
-                if(headOffset <= $(window).scrollTop()){
+                console.log($(window).scrollY())
+                if(headOffset <= $(window).scrollY()){
                     $('header').addClass('active');
                 }else{
                     $('header').removeClass('active');

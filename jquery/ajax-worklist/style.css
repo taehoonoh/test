@@ -1,0 +1,21 @@
+
+section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:1300px; margin:0 auto;
+
+}
+section img{
+    width:400px; 
+    max-height:400px;
+}
+
+/* // 썸이미지
+// 디테일이미지
+// 프로젝트명
+// 작업기간
+// 타입(반응형 모바일 pc)
+// 플러그인
+// 프로그램명
+// 개요 링크 */

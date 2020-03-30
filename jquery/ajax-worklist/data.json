@@ -1,0 +1,20 @@
+{
+    
+    "portfolio":[
+        {"work1":[
+            {"thum":"../img/img-01-thum.jpg"},
+            {"detail":"../img/img-01.jpg"},
+            {"name":"쿠팡"},
+            {"time":"24"},
+            {"link":"http://www.taehoonoh.github.io"}
+        ]},
+        {"work2":[
+            {"thum":"../img/img-02-thum.jpg"},
+            {"detail":"../img/img-02.jpg"},
+            {"name":"티몬"},
+            {"time":"12"},
+            {"link":"http://www.github.com/taehoonoh"}
+        ]}
+    ]
+}
+
