@@ -28,21 +28,22 @@ $(function(){
                 // 출력
 
             // main 썸네일 제목
+
             // sub 썸네일제목
             // detail 큰이미지 제목 기간
         }
+var workList;
+workList +="<li>";
+workList +="<figure>";
+workList +="<img src="+thum+">";
+workList +="<figcaption>";
+workList +="<span>"+name+"</span>";
+workList +="<span>"+time+"</span>";
+workList +="</figcaption>";
+workList +="</figure>";
+workList +="</li>";
 
-workList +="<li>"
-workList +="<figure>"
-workList +="<img src="">"
-workList +="<figcaption>"
-workList +="<span>제목</span>"
-workList +="<span>작업시간</span>"
-workList +="</figcaption>"
-workList +="</figure>"
-workList +="</li>"
-
-
+console.log(workList);
     });
     
     //end
