@@ -16,7 +16,7 @@ $(function(){
 
                 funmMain();
             }
-            });
+            );
 
             function funMain(){
 
