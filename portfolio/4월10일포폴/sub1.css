@@ -1,0 +1,336 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* ----------------css reset---------- */
+
+
+
+
+/* figure img{
+    width: 100%;
+    position: fixed;
+z-index: -1;} */
+
+body{
+    font-family: "Century Gothic";
+    background-image: url(pimg/cover22.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/*메뉴 */
+.menu{background: rgba(0,0,0,0.4);
+display: inline-block;
+width:230px;
+height: 100%;
+text-align: center;
+position: absolute;
+top:0;
+}
+.toggle{
+    position: relative;
+   top:0;
+   
+}
+.toggle span{
+    background: white;
+    z-index: 1;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top:0;
+    left:2%;
+}
+.toggle span:nth-of-type(1){
+    top:15px;
+    /* transform:rotate(-40deg); */
+}
+.toggle span:nth-of-type(2){
+    
+    top:25px;
+   
+    /* transform:rotate(40deg) */
+}
+.toggle span:nth-of-type(3){
+    top:35px;
+    /* opacity: 0; */
+    
+}
+
+
+/* 메뉴 헤더 */
+
+
+/* ABOUT */
+
+.menu header h1{
+    font-family: "Century Gothic";
+    color: white;
+   margin-top: 30%;
+   font-size: 30px;
+}
+/* TIME */
+.menu header h1 span{
+    font-family: "Brandon Grotesque Bold";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 네비 */
+.menu{
+    position: absolute;
+    top:0;
+    transition: 0.5;
+}
+.menu nav{
+    flex-direction: column;
+    display: flex;
+    padding-top: 40%;
+    
+}
+
+.menu nav a{
+    color: white;
+    text-decoration: none;
+    padding-top: 20%;
+}
+
+/* 메뉴 이미지 */
+nav .ott{padding-top: 90%;
+}
+
+nav .ott img{width: 30%;
+    margin-right: 10px;
+margin-top: 5%;}
+
+/* 메뉴 directed */
+.navText{  padding-top: 20%;
+}
+
+.navText p{color: white;
+font-size: 12px;}
+
+/* 메뉴 하단 이미지 */
+.navText img{
+    width: 90%;
+padding-bottom:34%;}
+
+
+.title{
+    color: white;
+    font-size: 1.8em;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.title strong{
+  }
+
+.title .pImg{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 35%;
+    width: 10%;
+}
+
+.title .pImg img{
+    width:70%;
+    margin: 10px;
+}
+
+.title .pImg img:nth-of-type(4){
+    margin-left: -10px;
+}
+.actor{
+    
+    overflow: hidden;
+}
+
+
+.aImg img{
+    width:25%;
+    margin-left: 20%;
+    float: left;
+    margin-right: 10%;
+}
+
+.imgText p {
+    font-size: 50px;
+    color: white;
+    margin-left: 10vh;
+
+  
+}
+.imgText p:nth-of-type(2) {
+    font-size: 20px;
+    color: white;
+    margin-left: 5vh;
+}
+
+.imgText p:nth-of-type(3) {
+    font-size: 1.3em;
+    color: white;
+    margin-left: 10vh;
+    white-space: pre;
+    margin-top: 40px;
+    line-height: 1.7em;
+}
+.imgText p:nth-of-type(4){
+    font-size: 30px;
+    color: white;
+   border: 1px solid;
+}
+.filmo{
+    width: 100%;
+    margin-top: 8vh;
+}
+.filmo p{
+    color: white;
+    font-size: 1.6em;
+    margin-left: 10vh;
+}
+
+
+.filmo ul{
+    display: flex;
+    align-items: center;
+}
+
+.filmo img{width:90%;
+}
+

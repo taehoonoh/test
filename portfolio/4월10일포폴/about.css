@@ -1,0 +1,275 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* ----------------css reset---------- */
+
+body{
+    font-family: "Century Gothic";
+}
+
+
+figure img{
+    width: 100%;
+    position: fixed;
+z-index: -1;
+filter: blur(1px);}
+
+/* body{background-image: url(pimg/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Century Gothic";
+} */
+
+
+/*메뉴 */
+.menu{background: rgba(0,0,0,0.4);
+display: inline-block;
+width:230px;
+height: 100%;
+text-align: center;
+
+}
+/* 메뉴 헤더 */
+
+
+/* ABOUT */
+.menu header h1{
+    font-family: "Century Gothic";
+    color: white;
+   padding-top: 30%;
+   font-size: 30px;
+}
+/* TIME */
+.menu header h1 span{
+    font-family: "Brandon Grotesque Bold";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 네비 */
+.menu nav{
+    flex-direction: column;
+    display: flex;
+    padding-top: 40%;
+    
+}
+
+.menu nav a{
+    color: white;
+    text-decoration: none;
+    padding-top: 20%;
+}
+
+/* 메뉴 이미지 */
+nav .ott{padding-top: 90%;
+}
+
+nav .ott img{width: 30%;
+    margin-right: 10px;
+margin-top: 5%;}
+
+/* 메뉴 directed */
+.navText{  padding-top: 20%;
+}
+
+.navText p{color: white;
+font-size: 12px;}
+
+/* 메뉴 하단 이미지 */
+.navText img{
+    width: 90%;
+padding-bottom:34%;}
+
+
+
+/* 비쥬얼 텍스트1 */
+.hText p{
+    white-space: pre;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top:25%;
+    left: 10%;
+    line-height: 1.3em;
+    animation: opacity 5s;
+}
+
+/* 비쥬얼텍스트2 */
+.hText2 p{
+    color: white;
+    position: absolute;
+    top:0;
+    white-space: pre;
+    text-align: left;
+    top:55%;
+    left: 18%;
+    line-height: 1.6em;
+    animation: opacity 5s;
+}
+/* 비디오 썸네일 */
+.hImg img{
+    width:25%;
+    position: absolute;
+    top:42%;
+    right:12%;
+    animation: trans 3s ;
+}
+
+.scdown img{
+    width: 3%;
+    position: absolute;
+    bottom: 5%;
+    left: 48%;
+    animation: turn 8s linear infinite;
+}
+
+@keyframes turn{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(-360deg)}
+}
+
+@keyframes opacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes trans{
+    0%{transform: translateY(5%);
+    opacity: 0};
+    100%{transform: translateY(100%);
+    opacity: 1;}
+}
+
