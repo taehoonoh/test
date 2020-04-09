@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"><p data-p="70">0%</p></div>
+
+
+
+<style>
+    div{width:1000px; height: 200px;}
+    .g1{
+    background: linear-gradient(90deg,rgb(29, 54, 136) 50%,rgb(138, 29, 110) 70%);
+        /* to top */
+    }
+    .g2{
+        width:400px; height: 200px;
+        background: radial-gradient(at 50% 50%,#f00,#000 80%);
+    
+        /* circle, ellipse 
+        at 30% 20%,
+
+        farthest-corner, farthest-side,
+        closet-corner, closest-side
+        
+        */
+    }
+
+    .g3 {background:conic-gradient(from 0deg,#f00 7%,#000 0%);
+    width:200px ;height: 200px;
+    position: relative;
+    border-radius: 50%;
+   
+    }
+
+    .g3 p{
+    width:70% ;height: 70%;
+    position: absolute;
+    background: #fff;
+    left:15%; top:15%;
+    border-radius: 50%;
+    margin: 0;
+    text-align: center;
+    line-height: 140px;
+    }
+
+
+   
+    .g3:after{
+        content: "";
+        position: absolute;
+        width: 70%;height: 70%;
+        background: #fff;
+        left: 15%;
+        top:15%;
+        border-radius:50%;}
+
+        
+</style>
+<script>
+
+    var g3 = document.querySelector('.g3');
+
+    var i =0;
+
+    g3.children[0].dataset.p
+
+    function skill(k){
+        loop =  setInterval(function(){
+            if(i== k){
+                clearInterval(loop); 
+                i=0;
+                return
+            }
+            i++;
+
+            g3.children[0].textContent = i+"%";
+            g3.style = `background:conic-gradient(from 0deg,#f00 ${i}%,#000 0%)`;
+
+        },10)
+        
+};
+
+skill(g3.children[0].dataset.p);
+</script>
+</body>
+</html>
